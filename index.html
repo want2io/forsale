@@ -16,7 +16,7 @@
       --panel: #fafafa;
       --panel-2: #f3f4f6;
       --button: #111111;
-      --button-hover: #000000;
+      --button-hover: #374151; /* Updated hover color */
     }
 
     * {
@@ -85,6 +85,13 @@
       border-radius: 999px;
       background: #111;
       display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(17, 17, 17, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(17, 17, 17, 0); }
     }
 
     h1 {
@@ -140,6 +147,9 @@
       margin-top: 48px;
       font-size: 14px;
       color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .right {
@@ -311,12 +321,12 @@
             <h1>want2.com</h1>
 
             <p class="sub">
-              A short, memorable domain with broad brand potential. If you’re interested in acquiring
-              <strong>want2.com</strong>, submit your offer or enquiry and I’ll get back to you.
+              A short, memorable 5-letter domain with broad brand potential. If you’re interested in acquiring
+              <strong>want2.com</strong>, submit your offer below.
             </p>
 
             <div class="price-box">
-              <strong>Status:</strong> Available for acquisition
+              <strong>Status:</strong> Accepting Offers
             </div>
 
             <div class="meta">
@@ -325,6 +335,11 @@
               <div class="meta-chip">Global use case</div>
             </div>
           </div>
+          
+          <div class="foot">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Secure ownership transfer via Escrow.com | &copy; <span id="year"></span>
+          </div>
 
         </div>
 
@@ -332,7 +347,7 @@
           <div class="form-shell">
             <h2 class="form-title">Make an offer</h2>
             <p class="form-copy">
-              Serious enquiries only. Include your offer and any relevant details in the message below.
+              Serious enquiries only. Please include your offer and intended use case. 
             </p>
 
             <form action="https://formspree.io/f/mjgpylvy" method="POST">
@@ -347,15 +362,15 @@
               </div>
 
               <div class="field">
-                <label for="message">Offer or message</label>
-                <textarea id="message" name="message" placeholder="Your offer, intended use, or message" required></textarea>
+                <label for="message">Offer (£ / $)</label>
+                <textarea id="message" name="message" placeholder="e.g. £5,000 via Escrow.com" required></textarea>
               </div>
 
               <button type="submit">Submit enquiry</button>
             </form>
 
             <div class="tiny">
-              Responses are reviewed manually.
+              Responses are reviewed manually within 24 hours.
             </div>
           </div>
         </div>
